@@ -9,7 +9,7 @@ function asyncGetRequest(requestURL, callback)
     xmlHttp.send(null);
 }
 
-const CV_IT_STATS_URL = "https://cors.io/?https://voice.mozilla.org/api/v1/it/clips/stats"
+const CV_IT_STATS_URL = "https://voice.mozilla.org/api/v1/it/clips/stats"
 
 asyncGetRequest(CV_IT_STATS_URL, function(response) {
     console.log(response);
