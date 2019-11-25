@@ -1,6 +1,6 @@
 function asyncGetRequest(requestURL, callback)
 {
-    var xmlHttp = new XMLHttpRequest();
+    var xmlHttp = new XMLHttpRequest({mozSystem: true});
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             callback(xmlHttp.responseText);
