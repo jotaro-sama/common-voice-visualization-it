@@ -21,7 +21,7 @@ function drawChart(data) {
     var svg = d3.select('svg').attr("width", svgWidth).attr("height", svgHeight);
     
     // Hierarchical element
-    var g = svg.append("group").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var x = d3.scaleTime().rangeRound([0, width]);
     var y = d3.scaleLinear().rangeRound([height, 0]);
@@ -42,14 +42,14 @@ function drawChart(data) {
 
 
     // Append bottom axis to hierarchical element
-    g.append("group")
+    g.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x))
         .select(".domain")
         .remove();
 
     // Append left axis
-    g.append("group")   
+    g.append("g")   
         .call(d3.axisLeft(y))
         .append("text")
         .attr("fill", "#000")   
@@ -87,7 +87,11 @@ function visualization() {
             return response.json();
         })
         .then(function (jsonResponse) {
+
             let parsedArray = parseToArray(jsonResponse);
+
+            console.log(parsedArray);
+
             drawChart(parsedArray);
         });
 }
