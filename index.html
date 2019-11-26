@@ -3,15 +3,23 @@
 <head>
     <title>Common Voice - Italian Data</title>
     <meta charset="UTF-8">
-    <!--<link rel="stylesheet" type="text/css" href="visualization.css" />-->
+    <link rel="stylesheet" type="text/css" href="visualization.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
     <script type="text/javascript" src="visualization.js"></script>
 </head>
 
-<body>
+<body onload="visualization();">
 
     <h1> Common Voice - Italian Data </h1>
+    <!--<div id="data_vis"></div>-->
+    <svg></svg>
+    <div id="red">
+        Red: Total number of sentences in the dataset
+    </div>
+    <div id="steelblue">
+        Blue: Number of validated sentences in the dataset
+    </div>
 
 </body>
 </html>

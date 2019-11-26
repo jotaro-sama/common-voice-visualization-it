@@ -1,0 +1,13 @@
+h1 {
+    font: 3.0em "Fira Sans", sans-serif;
+}
+
+#red {
+    color: red;
+    font: 1.2em "Fira Sans", sans-serif;
+}
+
+#steelblue {
+    color:steelblue;
+    font: 1.2em "Fira Sans", sans-serif;
+}
